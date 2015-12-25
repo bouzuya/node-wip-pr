@@ -7,8 +7,14 @@
     "email": "m@bouzuya.net",
     "url": "http://bouzuya.net"
   },
+  "bin": {
+    "wip-pr": "bin/wip-pr"
+  },
   "bugs": {
     "url": "https://github.com/bouzuya/node-wip-pr/issues"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.10.0"
   },
   "homepage": "https://github.com/bouzuya/node-wip-pr#readme",
   "license": "MIT",
@@ -16,5 +22,10 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bouzuya/node-wip-pr.git"
+  },
+  "scripts": {
+    "build": "coffee -c -o lib/ src/",
+    "clean": "rm -rf lib/",
+    "prepublish": "npm run clean && npm run build"
   }
 }
